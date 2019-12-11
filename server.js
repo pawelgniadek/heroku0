@@ -24,6 +24,8 @@ app.get('/add_user', function(req, res) {
     res.end("User added");
 })
 
-const listener = app.listen(8080, 
+const PORT = process.env.PORT || 8080;
+
+const listener = app.listen(PORT, 
 	() => console.log(`Listening on ${ listener.address().port }`));
 
