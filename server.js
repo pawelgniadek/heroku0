@@ -18,6 +18,12 @@ app.get('/users', function(req, res) {
     });
 })
 
+app.get('/get', function(req, res) {
+    res.end(`
+    <h1>Paweł Gniadek</h1>
+    `)
+})
+
 app.get('/add_user', function(req, res) {
     console.log(req.body);
     users.addUser(req.query.last_name, req.query.first_name);
